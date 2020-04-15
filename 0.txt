@@ -1,0 +1,5 @@
++======================+
+|     Generic Plant    |
++======================+
+
+This is a placeholder.

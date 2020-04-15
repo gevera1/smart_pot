@@ -14,15 +14,13 @@
    
    mysqli_select_db($conn, 'smart_pot');
 
-   echo "Enter plant ID: ";
-   $id = readline();
-
-   $sql = "SELECT * FROM plant WHERE id = '" . $id . "'";
+   $sql = "SELECT * FROM setting WHERE pid = '1'";
    
    $result = $conn->query($sql) or die($conn->error);
    
    if( $result->num_rows > 0 ) {
       	while($row = $result->fetch_assoc()) {
+		$id = $row['pid'];
       		$water = $row['water_intense'];
             	$led = $row['light_intense'];
             	$w_freq = $row['water_freq'];

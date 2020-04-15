@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 int main(int argc, char* argv[]) {
-	wiringPiSetup();
+	wiringPiSetup(); //
 	softPwmCreate(0, 0, 255);
 	for (int i = 0; i < 25; i++) {
 		softPwmWrite(0, 100); delay(500);
